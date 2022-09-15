@@ -1,2 +1,2 @@
-# BDI
-BDI code implementation.
+# NeurIPS2022 BDI
+BDI code coming soon.
