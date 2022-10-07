@@ -30,7 +30,6 @@ python -u BDI.py --mode grad --task AntMorphology-Exact-v0 --outer_lr 1e-3 --gam
 python -u BDI.py --mode distill --task AntMorphology-Exact-v0 --outer_lr 1e-3 --gamma 0.001
 python -u BDI.py --mode both --task AntMorphology-Exact-v0 --outer_lr 1e-3 --gamma 0.001
 ```
-The training log of the above experiments can be found in run.log.
 
 ## Acknowledgements
 We thank the design-bench library (https://github.com/brandontrabucco/design-bench) and the data distillation implementation (https://colab.research.google.com/github/google-research/google-research/blob/master/kip/KIP.ipynb).
