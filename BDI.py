@@ -70,11 +70,6 @@ def distill(args):
             # full batch gradient descent
             opt_state, train_loss = update_fn(i, opt_state, params, x_target_batch, y_target_batch)
             params = get_params(opt_state)
-            # post evaluation
-            if i % args.interval == 0:
-                score_after, _ = evaluate_sample(task, params['x'], args.task, shape0)
-                print("Data {} train loss {} score before {} score now {}".format(x_i, train_loss, score_before.squeeze(),
-                                                                                  score_after.squeeze()))
         # store the updated distilled data
         x_init[x_i] = params['x'].squeeze()
     max_score, median_score = evaluate_sample(task, x_init, args.task, shape0)
